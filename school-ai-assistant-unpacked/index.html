@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An early-stage open-source prototype for practical AI support in schools.">
+  <title>SchoolAI Assistant | Prototype</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-mark" aria-hidden="true">✦</div>
+    <div>
+      <p class="eyebrow">OPEN-SOURCE PROTOTYPE</p>
+      <h1>SchoolAI Assistant</h1>
+      <p class="subtitle">A thoughtful toolkit for teachers, school teams, and family communication.</p>
+    </div>
+    <span class="status">Demo mode</span>
+  </header>
+
+  <main>
+    <section class="notice">
+      <strong>Prototype only.</strong> This demo does not connect to an AI service, school ERP, student database, parent account, or physical robot. Please use fictional examples only.
+    </section>
+
+    <nav class="tabs" aria-label="Tools">
+      <button class="tab active" data-panel="activities">Classroom ideas</button>
+      <button class="tab" data-panel="announcements">Parent messages</button>
+      <button class="tab" data-panel="planner">Activity planner</button>
+    </nav>
+
+    <section id="activities" class="panel active">
+      <div class="panel-heading">
+        <p class="eyebrow">01 / TEACHER SUPPORT</p>
+        <h2>Explore a classroom idea</h2>
+        <p>Generate a starting point for an age-appropriate learning activity. Review and adapt every suggestion before use.</p>
+      </div>
+      <form id="idea-form" class="tool-form">
+        <label>Age group
+          <select id="age-group">
+            <option>2–3 years</option><option selected>3–4 years</option><option>4–5 years</option><option>5–6 years</option>
+          </select>
+        </label>
+        <label>Learning theme
+          <input id="theme" maxlength="80" placeholder="e.g. water, plants, shapes" required>
+        </label>
+        <label>Learning focus
+          <select id="focus">
+            <option>Language and storytelling</option><option>Early mathematics</option><option>Creative arts</option><option>Science and exploration</option><option>Social-emotional learning</option>
+          </select>
+        </label>
+        <button class="primary" type="submit">Create activity idea</button>
+      </form>
+      <div id="idea-result" class="result empty" aria-live="polite">Your activity idea will appear here.</div>
+    </section>
+
+    <section id="announcements" class="panel">
+      <div class="panel-heading">
+        <p class="eyebrow">02 / FAMILY COMMUNICATION</p>
+        <h2>Draft a parent announcement</h2>
+        <p>Create a clear message template. Check all dates, details, and school policies before sending.</p>
+      </div>
+      <form id="message-form" class="tool-form">
+        <label>Message type
+          <select id="message-type">
+            <option value="event">School event</option><option value="reminder">Friendly reminder</option><option value="learning">Learning update</option><option value="closure">Holiday or closure notice</option>
+          </select>
+        </label>
+        <label>Topic or event
+          <input id="message-topic" maxlength="100" placeholder="e.g. Family reading morning" required>
+        </label>
+        <label>Key details (no personal data)
+          <textarea id="message-details" rows="3" maxlength="500" placeholder="Date, time, what to bring, or action needed"></textarea>
+        </label>
+        <button class="primary" type="submit">Draft message</button>
+      </form>
+      <div id="message-result" class="result empty" aria-live="polite">Your message draft will appear here.</div>
+      <button id="copy-message" class="secondary" type="button" disabled>Copy draft</button>
+    </section>
+
+    <section id="planner" class="panel">
+      <div class="panel-heading">
+        <p class="eyebrow">03 / PLANNING</p>
+        <h2>Plan a simple learning session</h2>
+        <p>Use this structure as a starting point for a teacher-reviewed activity.</p>
+      </div>
+      <form id="planner-form" class="tool-form">
+        <label>Theme
+          <input id="plan-theme" maxlength="80" placeholder="e.g. tiny garden" required>
+        </label>
+        <label>Duration
+          <select id="duration"><option>15 minutes</option><option selected>25 minutes</option><option>35 minutes</option></select>
+        </label>
+        <button class="primary" type="submit">Build session outline</button>
+      </form>
+      <div id="plan-result" class="result empty" aria-live="polite">Your session outline will appear here.</div>
+    </section>
+
+    <section class="roadmap">
+      <p class="eyebrow">WHAT'S NEXT</p>
+      <h2>Built in the open, one useful piece at a time.</h2>
+      <div class="roadmap-grid">
+        <article><span>01</span><h3>Teacher tools</h3><p>Practical lesson and communication helpers with teacher review.</p></article>
+        <article><span>02</span><h3>School integrations</h3><p>Carefully scoped interfaces for existing systems, with privacy controls.</p></article>
+        <article><span>03</span><h3>Classroom robotics</h3><p>A future adapter design with explicit permissions and physical safety boundaries.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer>SchoolAI Assistant · Community prototype · No student data required</footer>
+  <script src="src/app.js"></script>
+</body>
+</html>
