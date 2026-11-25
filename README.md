@@ -18,10 +18,14 @@ No installation or build tools are needed.
 1. Download or clone this repository.
 2. Open `index.html` in a modern browser.
 
+## Run tests
+
+With Node.js 18 or newer, run `node --test` from the project folder. No packages are needed.
+
 ## Roadmap
 
 - [ ] Add a pluggable AI provider interface (keep API keys on a backend, never in browser code).
-- [ ] Add tests for message templates and input validation.
+- [x] Add tests for message templates and input validation.
 - [ ] Design role-based access for teachers and administrators.
 - [ ] Add privacy-by-design data handling and retention rules.
 - [ ] Define a safe, permissioned adapter interface for classroom robots.

@@ -16,4 +16,4 @@ Thanks for helping improve SchoolAI Assistant.
 - Robot-control work must not bypass hardware safety mechanisms or adult supervision.
 
 ## Development
-This is a static HTML/CSS/JavaScript demo. Open `index.html` in a browser and test the forms and tabs.
+This is a static HTML/CSS/JavaScript demo. Open `index.html` in a browser and test the forms and tabs. Run `node --test` to check the text templates.

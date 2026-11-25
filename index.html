@@ -23,13 +23,13 @@
       <strong>Prototype only.</strong> This demo does not connect to an AI service, school ERP, student database, parent account, or physical robot. Please use fictional examples only.
     </section>
 
-    <nav class="tabs" aria-label="Tools">
-      <button class="tab active" data-panel="activities">Classroom ideas</button>
-      <button class="tab" data-panel="announcements">Parent messages</button>
-      <button class="tab" data-panel="planner">Activity planner</button>
-    </nav>
+    <div class="tabs" role="tablist" aria-label="Tools">
+      <button class="tab active" type="button" role="tab" id="tab-activities" aria-controls="activities" aria-selected="true" data-panel="activities">Classroom ideas</button>
+      <button class="tab" type="button" role="tab" id="tab-announcements" aria-controls="announcements" aria-selected="false" tabindex="-1" data-panel="announcements">Parent messages</button>
+      <button class="tab" type="button" role="tab" id="tab-planner" aria-controls="planner" aria-selected="false" tabindex="-1" data-panel="planner">Activity planner</button>
+    </div>
 
-    <section id="activities" class="panel active">
+    <section id="activities" class="panel active" role="tabpanel" aria-labelledby="tab-activities">
       <div class="panel-heading">
         <p class="eyebrow">01 / TEACHER SUPPORT</p>
         <h2>Explore a classroom idea</h2>
@@ -54,7 +54,7 @@
       <div id="idea-result" class="result empty" aria-live="polite">Your activity idea will appear here.</div>
     </section>
 
-    <section id="announcements" class="panel">
+    <section id="announcements" class="panel" role="tabpanel" aria-labelledby="tab-announcements">
       <div class="panel-heading">
         <p class="eyebrow">02 / FAMILY COMMUNICATION</p>
         <h2>Draft a parent announcement</h2>
@@ -78,7 +78,7 @@
       <button id="copy-message" class="secondary" type="button" disabled>Copy draft</button>
     </section>
 
-    <section id="planner" class="panel">
+    <section id="planner" class="panel" role="tabpanel" aria-labelledby="tab-planner">
       <div class="panel-heading">
         <p class="eyebrow">03 / PLANNING</p>
         <h2>Plan a simple learning session</h2>
@@ -107,6 +107,7 @@
     </section>
   </main>
   <footer>SchoolAI Assistant · Community prototype · No student data required</footer>
+  <script src="src/templates.js"></script>
   <script src="src/app.js"></script>
 </body>
 </html>
